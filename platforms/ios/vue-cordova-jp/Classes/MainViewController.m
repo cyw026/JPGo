@@ -67,7 +67,10 @@
 {
     // View defaults to full size.  If you want to customize the view's size, or its subviews (e.g. webView),
     // you can do so here.
-
+    CGRect frame = [self.webView bounds];
+    frame.origin.y = 20;
+    frame.size.height = frame.size.height - 20;
+    self.webView.frame = frame;
     [super viewWillAppear:animated];
 }
 
